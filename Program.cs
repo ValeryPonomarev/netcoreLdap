@@ -85,6 +85,7 @@ namespace netLdap
             Console.WriteLine("Input password:");
             var password = Console.ReadLine();
 
+            connect = new LdapConnection();
             connect.Connect(url, 389);
             connect.Bind(login, password);
             Console.WriteLine("Authorization success");
